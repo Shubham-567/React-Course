@@ -1,0 +1,11 @@
+Props:   Read=-only properties that are shared between components.
+         A parent component can send data to a child component.
+         <Component key="value" />
+
+Props Type:  A mechanism to ensure that the passed value is of the correct data type.
+             age: PropsType.number
+
+Default Props:   Default values for props in case they are not passed from the parent component
+                 name: "Guest"
+
+                 
