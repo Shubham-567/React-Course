@@ -4,6 +4,7 @@ React web applications is built using components;
 
 Component is a section of reuseable code like nav-bar, footer, like button, card, etc.
 
+React uses Syntax Extension of JavaScript know as JSX
 JSX = JavaScript Xml (File)
 JSX allows you to write HTML like code in your JavaScript File
 
