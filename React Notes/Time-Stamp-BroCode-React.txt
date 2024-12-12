@@ -1,8 +1,8 @@
 
 1.  Completed       00:00:00 React tutorial for beginners ⚛️
-2.        00:20:26 card components 🃏
+2.  Completed       00:20:26 card components 🃏
 3.        00:32:24 add CSS styles 🎨
-4.        00:40:40 props📧
+4.        00:40:40 props📧 
 5.        00:52:49 conditional rendering ❓
 6.        01:03:04 render lists 📃
 7.        01:29:43 click events 👆
