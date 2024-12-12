@@ -3,8 +3,8 @@
 2.  Completed       00:20:26 card components 🃏
 3.  Completed       00:32:24 add CSS styles 🎨
 4.  Completed       00:40:40 props📧 
-5.        00:52:49 conditional rendering ❓
-6.        01:03:04 render lists 📃
+5.  Completed       00:52:49 conditional rendering ❓
+6.  Completed       01:03:04 render lists 📃
 7.        01:29:43 click events 👆
 8.        01:42:04 useState() hook 🎣
 9.        01:58:36 onChange event handler 🚦
