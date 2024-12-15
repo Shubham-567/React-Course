@@ -6,7 +6,7 @@
 5.  Completed       00:52:49 conditional rendering ❓
 6.  Completed       01:03:04 render lists 📃
 7.  Completed       01:29:43 click events 👆
-8.        01:42:04 useState() hook 🎣
+8.  Completed       01:42:04 useState() hook 🎣
 9.        01:58:36 onChange event handler 🚦
 10.       02:13:16 color picker app 🖌
 11.       02:23:31 updater functions 🔄
