@@ -9,7 +9,7 @@
 8.  Completed       01:42:04 useState() hook 🎣
 9.  Completed       01:58:36 onChange event handler 🚦
 10. Completed       02:13:16 color picker app 🖌
-11.       02:23:31 updater functions 🔄
+11. Completed       02:23:31 updater functions 🔄
 12.       02:30:45 update OBJECTS in state 🚗
 13.       02:39:55 update ARRAYS in state 🍎
 14.       02:48:55 update ARRAY of OBJECTS in state 🚘
