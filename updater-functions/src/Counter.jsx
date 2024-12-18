@@ -1,7 +1,7 @@
 // updaterFunction = A function passed as an argument to setState() usually
 //                   eg. setYear(updaterFunction)
 //                   or  setYear(arrowFunction)     Good..
-//                   ->  setYear(prevYear => prevYear + 1);
+//                   eg. setYear(prevYear => prevYear + 1);
 //                   or  setYear(y => y = 1);
 //
 //                   Allows for safe updates based on the previous state
