@@ -23,7 +23,7 @@ function MyComponent() {
             <li key={index} onClick={() => handleRemoveFood(index)}>
               {food}
             </li>
-          );``
+          );
         })}
       </ul>
 
