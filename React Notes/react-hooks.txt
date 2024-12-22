@@ -4,4 +4,4 @@ React Hook = Special function that allows functional components
 
 useState() = A React hook that allows creation of a stateful variables AND
              a setter function to update its value in the virtual DOM.
-             [name, setName]
+             const [name, setName] = useState(initialValue)
