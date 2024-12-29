@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function ToDoList() {
   const [tasks, setTasks] = useState([
@@ -54,34 +56,6 @@ function ToDoList() {
     showMessage("Task deleted successfully.", "success");
   }
 
-  function moveTaskUp(index) {
-    if (index > 0) {
-      const updatedTasks = [...tasks];
-
-      // Swapping using array destructuring
-      [updatedTasks[index], updatedTasks[index - 1]] = [
-        updatedTasks[index - 1],
-        updatedTasks[index],
-      ];
-
-      setTasks(updatedTasks);
-    }
-  }
-
-  function moveTaskDown(index) {
-    if (index < tasks.length - 1) {
-      const updatedTasks = [...tasks];
-
-      // Swapping using array destructuring
-      [updatedTasks[index], updatedTasks[index + 1]] = [
-        updatedTasks[index + 1],
-        updatedTasks[index],
-      ];
-
-      setTasks(updatedTasks);
-    }
-  }
-
   return (
     <div className='to-do-list'>
       <h1>To Do List</h1>
@@ -104,39 +78,38 @@ function ToDoList() {
       </p>
 
       <ol>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <div className='checkbox-wrapper task-text'>
-              <input
-                className='checkbox-input'
-                id={`checkbox-${index}`}
-                type='checkbox'
-                style={{ display: "none" }} // Hidden checkbox
-                aria-label={`Task: ${task}`} //for accessibility
-              />
-              <label className='checkbox-label' htmlFor={`checkbox-${index}`}>
-                <div className='checkbox-icon-container'>
-                  <span className='checkbox-icon'>
-                    <svg width='12px' height='9px' viewBox='0 0 12 9'>
-                      <polyline points='1 5 4 8 11 1'></polyline>
-                    </svg>
-                  </span>
-                  <span className='checkbox-text'>{task}</span>
-                </div>
-              </label>
-            </div>
+        {tasks
+          .slice()
+          .reverse()
+          .map((task, index) => (
+            <li key={index}>
+              <div className='checkbox-wrapper task-text'>
+                <input
+                  className='checkbox-input'
+                  id={`checkbox-${index}`}
+                  type='checkbox'
+                  style={{ display: "none" }} // Hidden checkbox
+                  aria-label={`Task: ${task}`} //for accessibility
+                />
+                <label className='checkbox-label' htmlFor={`checkbox-${index}`}>
+                  <div className='checkbox-icon-container'>
+                    <span className='checkbox-icon'>
+                      <svg width='12px' height='9px' viewBox='0 0 12 9'>
+                        <polyline points='1 5 4 8 11 1'></polyline>
+                      </svg>
+                    </span>
+                    <span className='checkbox-text'>{task}</span>
+                  </div>
+                </label>
+              </div>
 
-            <button className='delete-button' onClick={() => deleteTask(index)}>
-              Delete
-            </button>
-            <button className='move-button' onClick={() => moveTaskUp(index)}>
-              👆
-            </button>
-            <button className='move-button' onClick={() => moveTaskDown(index)}>
-              👇
-            </button>
-          </li>
-        ))}
+              <button
+                className='delete-button'
+                onClick={() => deleteTask(tasks.length - 1 - index)}>
+                <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </li>
+          ))}
       </ol>
     </div>
   );

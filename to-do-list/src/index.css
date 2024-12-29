@@ -53,13 +53,13 @@ button {
 }
 
 .delete-button {
-  background-color: hsl(11, 83%, 35%);
-  font-size: 1.2rem;
-  padding: 0.3em 0.7em;
+  background-color: transparent;
+  font-size: 1.1rem;
+  padding: 0.5em 0.7em;
 }
 
 .delete-button:hover {
-  background-color: hsl(11, 83%, 25%);
+  background-color: hsl(211, 82%, 23%);
 }
 
 .move-button {
