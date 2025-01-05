@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #ff9a00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9a00, #ff165d);
+  background: linear-gradient(to right, #ff9a00, #ff165d);
+
+  /* Centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container {
+  margin: 1.5rem;
+  padding: 5rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 20px hsla(0, 0%, 0%, 0.5);
+  background-color: #f6f7d7;
+}
+
+.clock {
+  font-size: 5rem;
+  text-shadow: 3px 3px 5px hsla(161, 13%, 33%, 0.5);
+  font-family: monospace;
+  text-align: center;
+}
