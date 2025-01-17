@@ -14,8 +14,8 @@
 13. Completed       02:39:55 update ARRAYS in state 🍎
 14. Completed       02:48:55 update ARRAY of OBJECTS in state 🚘
 15. Completed       03:01:42 to-do list app ☝
-16.       03:24:17 useEffect() hook 🌟
-17.       03:44:08 digital clock app 🕒
-18.       04:00:08 useContext() hook 🧗‍♂️
+16. Completed       03:24:17 useEffect() hook 🌟
+17. Completed       03:44:08 digital clock app 🕒
+18. Completed       04:00:08 useContext() hook 🧗‍♂️
 19.       04:11:44 useRef() hook 🗳️
 20.       04:23:01 stopwatch app ⏱

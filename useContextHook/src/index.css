@@ -1,0 +1,12 @@
+body {
+  font-family: "MuseoModerno", Arial, Helvetica, sans-serif;
+  padding: 20px 100px;
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 100%);
+}
+
+.box {
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 20px;
+  padding: 30px 50px;
+}

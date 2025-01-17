@@ -12,7 +12,7 @@ function DigitalClock() {
         return () => {
             clearInterval(intervalId);
         }
-    }, [])
+    }, []);
 
 
     function formattedTime() {
@@ -24,7 +24,10 @@ function DigitalClock() {
         const meridiem = hours < 12 ? "AM" : "PM";
         hours = hours % 12 || 12; // output: 1 to 11 if(0) then 12
 
-        return (`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`);
+        return (<>
+            <span className="time">{padZero(hours)}:{padZero(minutes)}:{padZero(seconds)}</span>
+            <span className="meridiem">{meridiem.toUpperCase()}</span>
+        </>);
     }
 
     function padZero(number) {
@@ -34,7 +37,7 @@ function DigitalClock() {
     return (
         <div className="clock-container">
             <div className="clock">
-                <span>{formattedTime()}</span>
+                {formattedTime()}
             </div>
         </div>
     );

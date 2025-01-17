@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800");
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #ff9a00; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff9a00, #ff165d);
   background: linear-gradient(to right, #ff9a00, #ff165d);
 
   /* Centering */
@@ -15,14 +15,22 @@ body {
 .clock-container {
   margin: 1.5rem;
   padding: 5rem;
+  min-width: 500px;
   border-radius: 20px;
   box-shadow: 3px 3px 20px hsla(0, 0%, 0%, 0.5);
   background-color: #f6f7d7;
 }
 
 .clock {
-  font-size: 5rem;
+  font-size: 6rem;
   text-shadow: 3px 3px 5px hsla(161, 13%, 33%, 0.5);
-  font-family: monospace;
+  font-family: "MuseoModerno", Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+.meridiem {
+  font-size: 0.4em;
+  margin-left: 0.4em;
+  font-weight: bolder;
+  letter-spacing: 4px;
 }
