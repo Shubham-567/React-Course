@@ -17,5 +17,5 @@
 16. Completed       03:24:17 useEffect() hook 🌟
 17. Completed       03:44:08 digital clock app 🕒
 18. Completed       04:00:08 useContext() hook 🧗‍♂️
-19.       04:11:44 useRef() hook 🗳️
-20.       04:23:01 stopwatch app ⏱
+19. Completed       04:11:44 useRef() hook 🗳️
+20. Completed       04:23:01 stopwatch app ⏱
