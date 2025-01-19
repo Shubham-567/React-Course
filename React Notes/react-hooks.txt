@@ -1,3 +1,4 @@
+React Hook:
 React Hook = Special function that allows functional components
              to use React features without writing class components (React v17.8).
              (useState, useEffect, useContext, useReducer, useCallback, and more...)
@@ -5,3 +6,95 @@ React Hook = Special function that allows functional components
 useState() = A React hook that allows creation of a stateful variables AND
              a setter function to update its value in the virtual DOM.
              const [name, setName] = useState(initialValue)
+
+
+----------------------------------------------------------------------------------------------------
+
+useEffect() =  React Hook that tells React to DO THIS CODE WHEN(pick one):
+               This Component re - renders
+               This Component mounts
+               The state of a value Changes
+
+syntax:
+     useEffect(function, [dependencies]);
+
+     useEffect(() => {});            // Runs after every re-render
+     useEffect(() => {}, []);        // Runs only on mount
+     useEffect(() => {}, [value])    // Runs on mount + when value change
+
+USES:
+#1 Event Listeners
+#2 Dom Manipulation
+#3 Subscriptions(real - time updates)
+#4 Fetching Data from an API
+#5 Clean up when a component unmounts
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+useContext() = React Hook that allows you to share values
+               between multiple levels of components
+               without passing props to each level.
+
+We use useContext() hook to prevent Prop drilling
+prop drilling happens when we pass value through multiple components
+Component A wants to pass the value="Shubham" to Component D through props
+A -> B -> C -> D and then Component D accesses the value
+
+
+HOW TO USE useContext():
+The providerComponent will provide a value to all of it's children's
+
+ProviderComponent
+1. import { CreateContext } from "react"'
+2. export const MyContext = CreateContext();
+3. <MyContext.Provider value={ value }>
+       <Child />
+   </MyContext.Provider>
+
+
+The ConsumerComponent is the child of ProviderComponent
+
+ConsumerComponents
+1. import React, { useContext } from "react";
+   import MyContext from "./Component.jsx";
+
+2. const value = useContext(MyContext);
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+UseReference Hook
+
+useState() = Re-renders the component when the state value changes.
+
+useRef() = "use Reference" Does not cause re-render when it's value changes.
+
+           Use this when you want a component to "remember" some information,
+           but you don't want that information to trigger new re-render.
+
+           It's helpful for:
+           1. Accessing/Interacting with DOM element
+           2. Handling Focus, Animation, and Transitions
+           3. Managing Timers and Intervals
+
+useRef() = returns a ref object with a single 'current' property,
+           initially set to the initial value you provided.
+
+
+useRef() = returns a ref object with a single 'current' property,
+           initially set to the initial value you provided.
+
+           That 'current' property can store:
+           1. value              3. object
+           2. array              4. html element
+
+           To store html element in current property use the ref attribute: <input ref={inputRef1}/>
+
+           
+----------------------------------------------------------------------------------------------------

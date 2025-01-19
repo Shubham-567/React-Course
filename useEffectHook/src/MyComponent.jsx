@@ -1,7 +1,7 @@
 // useEffect() =  React Hook that tells React to DO THIS CODE WHEN(pick one):
 //                This Component re - renders
 //                This Component mounts
-//                The state of a value
+//                The state of a value Changes
 
 // syntax:
 //      useEffect(function, [dependencies]);

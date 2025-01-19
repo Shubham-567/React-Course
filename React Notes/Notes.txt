@@ -1,0 +1,189 @@
+React is a JavaScript Library (not a framework);
+
+React web applications is built using components;
+
+Component is a section of reuseable code like nav-bar, footer, like button, card, etc.
+
+React uses Syntax Extension of JavaScript know as JSX
+JSX = JavaScript Xml (File)
+JSX allows you to write HTML like code in your JavaScript File
+
+----------------------------------------------------------------------------------------------------
+
+
+React Project Structure:
+my-react-app ->
+    node_modules ->
+        This folder contains all the necessary external packages and library that our project needs.
+    public ->
+        it contains any public assets such as fonts, images, videos, svg, etc. 
+        public assets are available via url 
+        it's not bundled
+    src -> 
+        assets ->
+            It is similar to public folder but it's bundled 
+            it can contains images, videos, svg, etc.
+        main.jsx ->
+            this functions like our main JavaScript file for react app
+        app.jsx -> 
+            this is the root component for our react app
+        app.css ->
+            this style sheet is for app.jsx 
+            it contains styles for app.jsx root component
+        index.css ->
+            this is the main css file for our application
+            it's like a globle.css file
+    index.html ->
+        this is the main entry point in our application
+    package.json ->
+        this file contains meta data about or project
+        such as project name, version, build, react version, dependencies, etc.
+
+
+----------------------------------------------------------------------------------------------------
+
+
+React PROPS:
+Props:          Read=-only properties that are shared between components.
+                A parent component can send data to a child component.
+                <Component key="value" />
+
+Props Type:     A mechanism to ensure that the passed value is of the correct data type.
+                age: PropsType.number
+
+Default Props:  Default values for props in case they are not passed from the parent component
+                name: "Guest"
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+OnChange Event Handler: 
+OnChange =  Event handler used primarily used with form elements
+            eg. <input>, <textarea>, <select>, <radio>, etc...
+            Triggers a function every time the value of input changes.
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+Updater Function:
+updaterFunction = A function passed as an argument to setState() usually
+                  eg. setYear(updaterFunction)
+                  or  setYear(arrowFunction)     Good..
+                  eg. setYear(prevYear => prevYear + 1);
+                  or  setYear(y => y = 1);
+
+                  Allows for safe updates based on the previous state
+                  Used with multiple state updates and asynchronous functions
+                  It is Good Practice to use updaterFunctions.
+
+----------------------------------------------------------------------------------------------------
+
+React Hook:
+React Hook = Special function that allows functional components
+             to use React features without writing class components (React v17.8).
+             (useState, useEffect, useContext, useReducer, useCallback, and more...)
+
+useState() = A React hook that allows creation of a stateful variables AND
+             a setter function to update its value in the virtual DOM.
+             const [name, setName] = useState(initialValue)
+
+             
+
+useEffect() =  React Hook that tells React to DO THIS CODE WHEN(pick one):
+               This Component re - renders
+               This Component mounts
+               The state of a value Changes
+
+syntax:
+     useEffect(function, [dependencies]);
+
+     useEffect(() => {});            Runs after every re-render
+     useEffect(() => {}, []);        Runs only on mount
+     useEffect(() => {}, [value])    Runs on mount + when value change
+
+USES:
+#1 Event Listeners
+#2 Dom Manipulation
+#3 Subscriptions(real - time updates)
+#4 Fetching Data from an API
+#5 Clean up when a component unmounts
+
+
+
+Examples of useEffect:
+
+    useEffect(() => {
+      document.title = `Count: ${count}`;   ---- It Will run this code every time component rerenders. ----
+    });
+
+    useEffect(() => {
+      document.title = `My Counter`;
+    }, []); --- Because of empty array this code will run only when it's mounted on app component ---
+
+    useEffect(() => {
+      document.title = `Count: ${count}`;
+    }, [count]); --- This code will run every time the value of count updates ---
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+useContext() = React Hook that allows you to share values
+               between multiple levels of components
+               without passing props to each level.
+
+We use useContext() hook to prevent Prop drilling
+prop drilling happens when we pass value through multiple components
+
+Component A wants to pass the value="Shubham" to Component D through props
+A -> B -> C -> D and then Component D accesses the value
+
+
+HOW TO USE useContext():
+The providerComponent will provide a value to all of it's children's
+
+ProviderComponent
+1. import { CreateContext } from "react"'
+2. export const MyContext = CreateContext();
+3. <MyContext.Provider value={ value }>
+       <Child />
+   </MyContext.Provider>
+
+
+The ConsumerComponent is the child of ProviderComponent
+
+ConsumerComponents
+1. import React, { useContext } from "react";
+   import MyContext from "./Component.jsx";
+
+2. const value = useContext(MyContext);
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+UseReference Hook
+
+useState() = Re-renders the component when the state value changes.
+
+useRef() = "use Reference" Does not cause re-render when it's value changes.
+
+           Use this when you want a component to "remember" some information,
+           but you don't want that information to trigger new re-render.
+
+           It's helpful for:
+           1. Accessing/Interacting with DOM element
+           2. Handling Focus, Animation, and Transitions
+           3. Managing Timers and Intervals
+
+useRef() = returns a ref object with a single 'current' property,
+           initially set to the initial value you provided.
+
+----------------------------------------------------------------------------------------------------
