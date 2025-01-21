@@ -1,0 +1,20 @@
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.primaryBtn {
+  background-color: #f35b04;
+  color: hsl(0, 0%, 100%);
+}
